@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+
+    <style>
+        .sg {
+            background-color: #d9e2c2;
+            border: 0.05rem solid;
+            /* padding-left: 20%; */
+            margin: 0 auto;
+        }
+
+        .sg2 {
+            background-color: rgb(250, 228, 129);
+            border: 0.05rem solid;
+        }
+
+        tr,
+        * {
+            text-align: center;
+            margin: 0 auto;
+            font-family:  'san-serif',Helvetica,'Open Sans';
+        }
+
+        table {
+            margin: 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table>
+
+        <tr>
+            <td>
+                <form action="">
+                    <label for="scheme">Scheme</label>
+                    <select name="scheme" id="scheme">
+                        <option value="uniform">uniform</option>
+                        <option value="non-uniform">non-uniform</option>
+                    </select>
+
+                    <label for="process">Number of Processes</label>
+                    <input type="number" id="process" value=6>
+
+                    <label for="elements">Elements per data-block</label>
+                    <input type="number" id="elements" value=2>
+                    <input type="reset" value="Reset">
+                </form>
+
+
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <svg class="sg" width="500" height="500"></svg>
+            </td>
+            <td><svg class="sg2" width="500" height="500"></svg></td>
+
+        </tr>
+
+        <tr>
+            <td>
+                <h3>Initial Data</h3>
+            </td>
+        </tr>
+        <tr>
+            <td>
+
+                <form>
+                    <input type="button" name="play" value="play" onclick="vo()">
+                    <input type="button" name="pause" value="pause" onclick="clearTimeout();">
+                    <input type="button" name="reset" value="reset" onclick="window.location.reload();">
+                    <!-- <input type="button" name="step" value="step" onclick="run0()">
+            <input type="button" name="step1" value="step1" onclick="run1()">
+            <input type="button" name="step2" value="step2" onclick="run2()">
+            <input type="button" name="step3" value="step3" onclick="run3()">
+            <input type="button" name="step4" value="step4" onclick="run4()">
+            <input type="button" name="finalRotation" value="finalRotation" onclick="run5()"> -->
+                    <!-- <input type="button" name="remove" value="remove" onclick=""> -->
+                </form>
+            </td>
+        </tr>
+
+
+    </table>
+
+    <script src="https://d3js.org/d3.v5.js"></script>
+    <script src="index.js"></script>
+    <!-- <script src="index2.js"></script> -->
+</body>
+
+</html>
